@@ -1,0 +1,523 @@
+* {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Iceland";
+  src: url(fonts/Iceland/Iceland-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url(fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Share_Tech_Mono";
+  src: url(fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf);
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #198170;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    background: url("img/bg1.jpg");
+    justify-content: center;
+    font-family: "Iceland";
+    font-size: 35px;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+    background: url("img/bg2.jpg") center; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    width: 100%;
+    background: url("img/bg1.jpg") no-repeat center center; 
+    background-size: cover;
+    color: #fff; 
+  }
+
+  .sidebar {
+    background-color: #087e66eb;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .sidebar h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: "Iceland";
+  }
+  
+  .sidebar p {
+    font-family: Geneva;
+    font-size: 20px;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: "Orbitron";
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .sidebar ul li a:hover {
+    color: #033c19;
+    font-weight: bolder;
+    transition: color 0.3s ease;
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.155);
+    order: -1; 
+    backdrop-filter: blur(8px);
+  }
+
+  .content h1 {
+    padding-top: 70px;
+    font-size: 100px; 
+    color: #ffffff; 
+    text-align: center; 
+    margin: 20px auto; 
+    max-width: 800px; 
+    font-family: "Iceland";
+  } 
+
+  .content p {
+    padding-top: 40px;
+    font-size: 30px; 
+    color: ghostwhite;
+    text-align: center; 
+    margin: 20px auto; 
+    max-width: 800px; 
+    font-family: "Orbitron";
+  }
+
+  .profile-image {
+    width: 100%;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+    }
+
+    .content {
+      padding: 15px;
+    }
+
+    .content h1 {
+      font-size: 36px;
+    }
+
+  }
+
+
+  .side-panel {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #0d584beb;
+    color: white;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s;
+  }
+
+  .side-panel a {
+    background-color: white;
+    color: #198170;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: left;
+    margin: 0.5rem 0;
+    text-decoration: none;
+  }
+
+  .side-panel a:hover {
+    background-color: #ddd;
+    transition: background-color 0.3s;
+    font-weight: bolder;
+    transition: color 0.3s ease;
+  }
+
+  .side-panel-trigger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .side-panel h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: "Iceland";
+  }
+
+  .side-panel p {
+    font-family: Geneva;
+    font-size: 20px;
+  }
+
+  .side-panel ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: "Orbitron";
+    font-weight: 800px;
+  }
+
+  .side-panel ul li {
+    margin: 10px 0;
+  }
+
+  .side-panel ul li a {
+    color: #198170;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .side-panel li a:hover {
+    color: #04AA6D;
+  }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+    padding: 60px; 
+    backdrop-filter: blur(10px);
+}
+
+.image {
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.image img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: inherit;
+    display: block; 
+}
+
+.image:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05); 
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.aboutcontent {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.155);
+  order: -1; 
+  backdrop-filter: blur(8px);
+}
+
+.aboutcontent h1 {
+  padding-top: 60px;
+  font-size: 80px; 
+  color: #ffffff; 
+  text-align: center; 
+  margin: 20px auto; 
+  max-width: 800px; 
+  font-family: "Iceland";
+} 
+
+.aboutcontent p {
+  padding-top: 30px;
+  padding-bottom: 110px;
+  font-size: 25px; 
+  color: rgb(255, 255, 255);
+  text-align: center; 
+  margin: 20px auto; 
+  max-width: 800px; 
+  font-family: "Share_Tech_Mono";
+} 
+
+
+.hobby-container{
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-bottom: 70px;
+}
+
+.hobby-container #rectangle{
+  background-color: cadetblue;
+  border-radius: 15px;
+}
+
+.hobby-container h2 {
+  text-align: center;
+  padding: 20px;
+  font-family: "Orbitron";
+}
+
+.hobbies-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.hobby-item {
+  width: 300px; 
+  height: 350px; 
+  background-color: rgba(126, 210, 213, 0.504);
+  backdrop-filter: blur 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 25px;
+  transition: transform 0.3s ease;
+}
+
+.hobby-item:hover {
+  transform: scale(1.05);
+}
+
+.hobby-item img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  border-radius: 10px;
+
+}
+
+.hobby-item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f7f7f7;
+  font-family: "Share_Tech_Mono";
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, auto); 
+  gap: 25px; 
+  max-width: 1300px; 
+  margin: 0 auto; 
+  padding-top: 40px;
+  padding-bottom: 45px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: rgba(0, 0, 0, 0.155);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.edu-box {
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Share_Tech_Mono";
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.edu-box:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+}
+
+.cnsc { 
+  background-color: #d8200ba9; 
+}
+.nca { 
+  background-color: #049741c9; 
+}
+.lsths { 
+  background-color: #03692dd8; 
+}
+.les { 
+  background-color: #002b70d9; 
+}
+
+.contact-container {
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 270px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.155);
+}
+
+.contact-text {
+  font-size: 40px;
+  color: whitesmoke;
+  margin: 20px 0 40px;
+  line-height: 1.5;
+  text-align: center;
+  font-family: "Share_Tech_Mono";
+}
+
+.contact-grid {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 50%; 
+}
+
+.contact-item p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fafafa;
+  font-family: "Orbitron";
+}
+
+.contact-item img:hover {
+  transform: scale(1.2); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+}

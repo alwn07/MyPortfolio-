@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Gallery</h1>
+    </header>
+    
+    <main>
+        <div class="gallery">
+
+            <div class="image" >
+                <img src="img/1.jpeg" alt="Picture 1" >
+            </div>
+
+            <div class="image" >
+                <img src="img/2.jpg" alt="Picture 2" >
+            </div>
+
+            <div class="image">
+                <img src="img/3.jpeg" alt="Picture 3" >
+            </div>
+
+            <div class="image">
+                <img src="img/4.jpg" alt="Picture 4" >
+            </div>
+
+            <div class="image" >
+                <img src="img/5.jpg" alt="Picture 5" >
+            </div>
+
+            <div class="image" >
+                <img src="img/6.jpg" alt="Picture 6" >
+            </div>
+
+            <div class="image" >
+                <img src="img/7.jpg"  alt="Picture 7" >
+            </div>
+
+            <div class="image" >
+                <img src="img/8.jpg" alt="Picture 8" >
+            </div>
+
+            <div class="image" >
+                <img src="img/gradsds.jpg" alt="Picture 9" >
+            </div>
+
+            <div class="image" >
+                <img src="img/654.jpg" alt="Picture 10" >
+            </div>
+
+            <div class="image" >
+                <img src="img/24.jpeg" alt="Picture 11" >
+            </div>
+
+            <div class="image" >
+                <img src="img/xiao.jpg" alt="Picture 12" >
+            </div>
+
+            <div class="image" >
+                <img src="img/13.jpg" alt="Picture 13" >
+            </div>
+
+            <div class="image" >
+                <img src="img/14.jpg" alt="Picture 14" >
+            </div>
+
+            <div class="image" >
+                <img src="img/15.jpg" alt="Picture 15" >
+            </div>
+
+            <div class="image" >
+                <img src="img/16.jpg" alt="Picture 16" >
+            </div>
+
+            <div class="image" >
+                <img src="img/17.jpg" alt="Picture 17" >
+            </div>
+
+            <div class="image" >
+                <img src="img/wander.jpg" alt="Picture 18" >
+            </div>
+
+            <div class="image">
+                <img src="img/addfc.jpg" alt="Picture 19">
+            </div>
+
+            <div class="image">
+                <img src="img/20.jpg" alt="Picture 20">
+            </div>
+    </main>
+
+    <div id="side-panel" class="side-panel" 
+        onmouseenter="showPanel()" 
+        onmouseleave="hidePanel()">
+        <img src="img/pfp.jpg" alt="Profile Picture" class="profile-image">
+            <h2>Alwin V. Camino</h2>
+            <p>Bachelor Of Science In Information Technology</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="side-panel-trigger" onmouseover="showPanel()">
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+
+    </div>
+    
+
+    <script src="script.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header>
+        <h1>About Me</h1>
+   </header>
+
+   <div class="container">
+
+        <div class="aboutcontent">
+            <h1>Hi, I'm Alwin Camino</h1>
+            <p>
+                A BSIT student with a knack for exploring the world of technology and the simple joys of life.
+                <br><br>
+                When I'm not diving into tech projects or coursework, you'll often find me immersed in the pages
+                of a captivating manhwa or manga, sometimes I listen to music while reading and when I'm doing schoolworks.
+                I also enjoy relaxing by watching anime or taking leisurely bike rides to clear my mind and recharge.
+                <br><br>
+                This is just a little glimpse of who I am. Thanks for taking the time to learn about me!
+            </p>
+
+            <div class="hobby-container" style="text-align: center;">
+
+                <div id="rectangle">
+                    <h2>My Hobbies</h2>
+                </div>
+
+                <div class="hobbies-grid">
+ 
+                    <div class="hobby-item">
+                        <img src="img/sleep.jpg" alt="Sleeping">
+                        <p>Sleeping</p>
+                    </div>
+                   
+                    <div class="hobby-item">
+                        <img src="img/read.jpg" alt="Reading">
+                        <p>Reading</p>
+                    </div>
+                  
+                    <div class="hobby-item" onclick="toggleAudio()">
+                        <img src="img/bike.gif" alt="Riding bike">
+                        <p>Bike</p>
+                        <audio id="bikeAudio" src="PokemonEmeraldTheme.mp3"></audio>
+                    </div>
+
+                    <div class="hobby-item" onclick="toggleAudio()">
+                        <img src="img/music.png" alt="Listening to music">
+                        <p>Listening to  music</p>
+                        
+                    </div>
+
+                    <div class="hobby-item">
+                        <img src="img/eat.jpg" alt="Eating">
+                        <p>Eating</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <img src="img/Anime.png" alt="Anime">
+                        <p>Anime</p>
+                    </div>
+
+                </div>
+                    
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="side-panel" class="side-panel" 
+        onmouseenter="showPanel()" 
+        onmouseleave="hidePanel()">
+        <img src="img/pfp.jpg" alt="Profile Picture" class="profile-image">
+            <h2>Alwin V. Camino</h2>
+            <p>Bachelor Of Science In Information Technology</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="side-panel-trigger" onmouseover="showPanel()">
+    </div>
+
+    
+    <script src="script.js"></script>
+
+
+
+
+</body>
+</html>

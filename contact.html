@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(img/bg1.jpg); background-size: cover;">
+
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <section class="contact-container">
+        <p class="contact-text">
+            Feel free to contact me through these platforms<br>
+            if you guys have anything to say ^_^
+        </p>
+        <div class="contact-grid">
+
+            <div class="contact-item">
+                <a href="https://www.facebook.com/alwin.camino.1?mibextid=ZbWKwL" target="_blank">
+                    <img src="img/fbicon.png" alt="Facebook">
+                </a>
+                <p>Facebook</p>
+            </div>
+
+            <div class="contact-item">
+                <a href="https://discordapp.com/users/861130740888764436" target="_blank">
+                    <img src="img/dcicon.jpg" alt="Discord">
+                </a>
+                <p>Discord</p>
+            </div>
+
+            <div class="contact-item">
+                <a href="mailto:caminoalwin@gmail.com" target="_blank">
+                    <img src="img/emailicon.jpg" alt="Email">
+                </a>   
+                <p>Email</p>
+            </div>
+
+            <div class="contact-item">
+                <a href="tel:+0907610003" target="_blank">
+                    <img src="img/callicon.png" alt="Mobile">
+                </a>
+                <p>Mobile</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <div id="side-panel" class="side-panel" 
+        onmouseenter="showPanel()" 
+        onmouseleave="hidePanel()">
+        <img src="img/pfp.jpg" alt="Profile Picture" class="profile-image">
+            <h2>Alwin V. Camino</h2>
+            <p>Bachelor Of Science In Information Technology</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="side-panel-trigger" onmouseover="showPanel()">
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
